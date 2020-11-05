@@ -8,10 +8,19 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<nav id='navbar'>
+			<div class="nav-cont">
+				<a href='#s1'>Home</a>
+				<a href='#s2'>Projects</a>
+				<a href='#s3'>Skills</a>
+				<a href='#s4'>About</a>
+				<a href='#s5'>Contact</a>
+			</div>
+		</nav>
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<section id='s1' class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Ryan Milne</h1>
 							<p class="major">FULL STACK SOFTWARE DEVELOPER </p>
@@ -21,8 +30,13 @@
 							<img src="https://images.unsplash.com/photo-1554595666-19ceabf46a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="Main image of workspace" />
 						</div>
 					</section>
-
-				<!-- Two -->
+					<div class="wrapper style1 align-center">
+						<div id='s2' class="inner">
+							<h2>Projects</h2>
+						</div>
+					</div>
+					<!-- Two -->
+					
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>My Portfolio</h2>
@@ -48,7 +62,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Person on laptop" />
+							<img src="https://i.ibb.co/F6LKvqZ/YT-Yelp-Screen-1.png"  alt="Home Page of Website" border="0" />
 						</div>
 					</section>
 
@@ -56,13 +70,14 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Alley-Hoop</h2>
-							<p> A site designed to helped users locate pick-up basketball games as well as schedule a pick-up basketball game. This is the first ever site i created by myself and i really enjoyed showing off my skills for the first time.</p>
+							<p> A mobile friendly site designed to helped users locate pick-up basketball games as well as schedule a pick-up basketball game. This is the first ever site i created by myself and i really enjoyed showing off my skills for the first time.</p>
 							<ul class="actions stacked">
 								<li><a href="https://github.com/RyanM245/alley_hoop" class="button">Check out the code</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="https://images.unsplash.com/photo-1496033604106-04799291ee86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Basketball court" />
+							<img src="https://i.ibb.co/ZJ60wVz/Alley-Hoop-3.png" />
+							<img src="https://i.ibb.co/ZJ60wVz/Alley-Hoop-3.png" />
 						</div>
 					</section>
 
@@ -71,7 +86,7 @@
 
 				<!-- Six -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
+						<div id='s3' class="inner">
 							<h2>Skills</h2>
 							<p>Below you can see some of the technologies I have worked
 								with and learned over my time as a DevMountain student. </p>
@@ -127,7 +142,7 @@
 					</section>
 
 					<section class="wrapper style1 align-center">
-						<div class="inner">
+						<div id='s4' class="inner">
 							<h2>About Me</h2>
 							<p>Hi I'm Ryan Milne! I'm a full-stack software developer, husband,
 								self-proclaimed basketball analyst, and wanna-be foodie! Although I am fairly new to the Web Development world I have grown up with a love to solve problems. I have seen that through technology and continued education people can improve their lives!</p>
@@ -185,12 +200,14 @@
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
-						<div class="inner">
+						<div id='s5' class="inner">
+							<h2>Contact Me</h2>
 							<ul class="icons">
 								<a href="http://www.linkedin.com/in/ryan-milne-744200141" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
 								<a href="https://github.com/RyanM245" class="icon brands style2 fa-github"><span class="label">Github</span></a>
 							</ul>
 							<h4>ryanmilne101@gamil.com</h4>
+							<a href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://docs.google.com/document/d/1pARf7wezgHqNl6UTMuoKviJiGRtVLyRii5rHdf6QAKw/edit&followup=https://docs.google.com/document/d/1pARf7wezgHqNl6UTMuoKviJiGRtVLyRii5rHdf6QAKw/edit&ltmpl=docs" style="text-decoration: none;">Click here check out my resume</a>
 							<p>&copy; Ryan Milne</p>
 						</div>
 					</footer>
@@ -205,6 +222,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var prevScrollpos = window.pageYOffset;
+				window.onscroll = function() {
+				var currentScrollPos = window.pageYOffset;
+					if (prevScrollpos > currentScrollPos) {
+						document.getElementById("navbar").style.top = "0";
+					} else {
+						document.getElementById("navbar").style.top = "-50px";
+					}
+					prevScrollpos = currentScrollPos;
+				}
+				</script>
 
 	</body>
 </html>
